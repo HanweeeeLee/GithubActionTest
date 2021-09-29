@@ -22,7 +22,7 @@ jobs:
     - name: Run tests
       run: |
         pod install --repo-update --clean-install
-        set -o pipefail && xcodebuild -workspace GithubActionTest.xcworkspace -scheme GithubActionTest -destination "platform=iOS Simulator,name=iPhone 12 Pro"
+        set -o pipefail && xcodebuild -workspace GithubActionTest.xcworkspace -scheme GithubActionTest -destination "name=iPhone 11" test
         
         
 #         strategy:
